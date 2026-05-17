@@ -1,0 +1,17 @@
+{
+  "[project]/app/components/ThreeCanvas.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/app/components/ThreeCanvas.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_three_build_three_module_0-hpi58.js",
+      "static/chunks/app_components_ThreeCanvas_tsx_0znabkw._.js",
+      "static/chunks/app_components_ThreeCanvas_tsx_0k_08ay._.js"
+    ]
+  },
+  "[project]/app/components/Cursor.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/app/components/Cursor.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/app_components_Cursor_tsx_0m7n3vd._.js",
+      "static/chunks/app_components_Cursor_tsx_0k_08ay._.js"
+    ]
+  }
+}
