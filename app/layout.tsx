@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Matam Media — Noha & Manqabat",
+  title: "Noha & Manqabat",
   description: "Nadeem Sarwar, Mir Hasan Mir, Ali Shanawar ke nohay, manqabat aur majalis — sab ek jagah",
   keywords: "noha, manqabat, majlis, nadeem sarwar, mir hasan mir, ali shanawar, karbala, muharram",
 };

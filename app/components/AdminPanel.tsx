@@ -1,18 +1,28 @@
 "use client";
 import { useState, useRef } from "react";
 
-const PASS = "matammedia2024";
+const PASS = "nohay2026";
 const CATS = [
-  { id: "nadeem-sarwar", name: "Nadeem Sarwar" },
-  { id: "mir-hasan-mir", name: "Mir Hasan Mir" },
-  { id: "ali-shanawar",  name: "Ali Shanawar"  },
-  { id: "shadman-raza",  name: "Shadman Raza"  },
+  { id: "Nohay", name: "Nohay"  },
   { id: "manqabat",      name: "Manqabat"      },
   { id: "majlis",        name: "Majlis"         },
+  {id:"marsiya", name:"Marsiya" },
+  {id:"naat", name:"Naat" },
 ];
-
+const NOHa = [
+  
+  { id: "nadeem-sarwar", name: "Nadeem Sarwar" },
+  { id: "Farhan ali waris", name: "Farhan ali waris" },
+  { id: "Mir hasan Mir", name: "Mir Hasan Mir" },
+  { id: "Shadman Raza ", name: "Shadman Raza " },
+  { id: "nadeem-sarwar", name: "Nadeem Sarwar" },
+  { id: "Shahid Baltistani", name: "Shahid Baltistani" },
+  { id: "Irfan Haider", name: "Irfan Haider" },
+  { id: "Raza Abbas", name: "Raza Abbas" },
+  { id: "ALi Jee", name: "Ali Jee" },
+];
 const KARBALA_VIDEOS = [
-  { id: "wTM0hT5EAFY", label: "Karbala Aerial View"       },
+  { id: "JYaOHMrQmKE", label: "Karbala Aerial View"       },
   { id: "JYaOHMrQmKE", label: "Imam Hussain Shrine 4K"    },
   { id: "FKkJCTbUPcM", label: "Muharram Atmosphere"       },
   { id: "C0DPdy98e4c", label: "Karbala Night Illuminated" },

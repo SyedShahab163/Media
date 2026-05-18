@@ -138,8 +138,8 @@ export default function Home() {
             Islamic Media Platform
           </div>
           <h1 className="hero-title">
-            <span className="line"><span className="inner" style={{ transform:"none", animation:"none" }}>Matam</span></span>
-            <span className="line"><span className="inner accent" style={{ transform:"none", animation:"none" }}>Media.</span></span>
+            <span className="line"><span className="inner" style={{ transform:"none", animation:"none" }}>Nohay</span></span>
+            <span className="line"><span className="inner accent" style={{ transform:"none", animation:"none" }}>Manqabat</span></span>
           </h1>
           <p className="hero-sub">
             The ultimate destination for Nohay, Manqabat and Majalis.<br />
@@ -336,8 +336,8 @@ export default function Home() {
               <p className="sec-body" style={{ marginBottom:"2.5rem" }}>
                 Have a video request, suggestion or just want to get in touch? We&apos;d love to hear from you.
               </p>
-              <a href="mailto:matammedia@gmail.com" className="contact-email-big" data-hover>
-                matammedia@gmail.com
+              <a href="mailto:MuhammadRizvi@gmail.com" className="contact-email-big" data-hover>
+                MuhammadRizvi@gmail.com
               </a>
               <div style={{ display:"flex", gap:"1rem", marginTop:"2rem" }}>
                 {["Video Request","Feedback","Partnership"].map(tag => (
@@ -386,7 +386,7 @@ export default function Home() {
         <div style={{ maxWidth:"1200px", margin:"0 auto" }}>
           <div className="footer-grid" style={{ display:"grid", gridTemplateColumns:"2fr 1fr 1fr 1fr", gap:"3rem", marginBottom:"4rem" }}>
             <div className="footer-brand">
-              <div className="footer-logo">Matam<span>.</span>Media</div>
+              <div className="footer-logo">Nohay<span>.</span>Menqabat</div>
               <p className="footer-tagline">The ultimate Islamic media platform for Nohay, Manqabat and Majalis. Always free, always growing.</p>
             </div>
             <div>
@@ -406,11 +406,11 @@ export default function Home() {
             <div>
               <div className="foot-col-title">Admin</div>
               <button className="foot-link" onClick={() => setAdminOpen(true)}>Admin Panel</button>
-              <a href="mailto:matammedia@gmail.com" className="foot-link">Email Us</a>
+              <a href="mailto:MuhammadRizvi@gmail.com" className="foot-link">Email Us</a>
             </div>
           </div>
           <div className="foot-bottom">
-            <p className="foot-copy">© 2024 Matam.Media — All rights reserved</p>
+            <p className="foot-copy">© 2024 Nohay.Menqabat — All rights reserved</p>
             <div className="foot-red-dot" />
             <p className="foot-copy">Ya Hussain (A.S)</p>
           </div>

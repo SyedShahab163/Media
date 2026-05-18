@@ -36,7 +36,7 @@ export default function Navbar({ onAdmin }: { onAdmin: () => void }) {
         {/* Logo */}
         <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{ cursor: "pointer" }} data-hover>
-          Matam<span>.</span>Media
+          Nohay<span>.</span>Manqabat
         </div>
 
         {/* Desktop links */}
@@ -72,14 +72,14 @@ export default function Navbar({ onAdmin }: { onAdmin: () => void }) {
 
         {/* Logo in drawer */}
         <div style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "2rem", color: "#fff" }}>
-          Matam<span style={{ color: "var(--accent)" }}>.</span>Media
+          Nohay<span style={{ color: "var(--accent)" }}>.</span>Manqabat
         </div>
 
         {LINKS.map(([id, label]) => (
           <button key={id} className="mob-drawer-link" onClick={() => go(id)}>{label}</button>
         ))}
         <button className="mob-drawer-admin" onClick={() => { setOpen(false); onAdmin(); }}>
-          Admin Panel
+          Studio
         </button>
       </div>
     </>
