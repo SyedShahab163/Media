@@ -138,7 +138,7 @@ export default function Home() {
             Islamic Media Platform
           </div>
           <h1 className="hero-title">
-            <span className="line"><span className="inner" style={{ transform:"none", animation:"none" }}>Nohay</span></span>
+            <span className="line"><span className="inner" style={{ transform:"none", animation:"none" }}>Noha</span></span>
             <span className="line"><span className="inner accent" style={{ transform:"none", animation:"none" }}>Manqabat</span></span>
           </h1>
           <p className="hero-sub">
