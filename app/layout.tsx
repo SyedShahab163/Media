@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Noha & Manqabat",
+  title: "Matam Media — Noha & Manqabat",
   description: "Nadeem Sarwar, Mir Hasan Mir, Ali Shanawar ke nohay, manqabat aur majalis — sab ek jagah",
-  keywords:  " nohay.online ,noha, manqabat,nohay,no,nohay2026,majis  majlis, nadeem sarwar, mir hasan mir, ali shanawar, karbala, muharram",
-verification: {
-    google: "google-site-verification=9Yt9fOm3NgJH0bk73titMIi7HU46FYLD1WfEqjNlubQ", // Jo code humne pehle lagaya tha
-  },
+  keywords: "noha, manqabat, majlis, nadeem sarwar, mir hasan mir, ali shanawar, karbala, muharram",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

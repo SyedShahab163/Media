@@ -2,140 +2,95 @@
 import { useEffect, useRef } from "react";
 
 export default function ThreeCanvas() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!canvasRef.current) return;
+    const mount = mountRef.current;
+    if (!mount) return;
     let animId: number;
-    let cleanupFn: (() => void) | undefined;
+    let cleanup: (() => void) | null = null;
 
     (async () => {
       const THREE = await import("three");
-      const canvas = canvasRef.current;
-      if (!canvas) return;
+      type ThreeMesh = InstanceType<typeof THREE.Mesh>;
+      type S = { mesh: ThreeMesh; vx: number; vy: number; vr: number };
 
-      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      const W = window.innerWidth, H = window.innerHeight;
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(W, H);
+      renderer.setClearColor(0x000000, 0);
+      const canvas = renderer.domElement;
+      canvas.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;";
+      mount.appendChild(canvas);
 
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 6;
+      const scene  = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, W / H, 0.1, 1000);
+      camera.position.z = 5;
 
-      // ── PARTICLES ──
-      const N = 3000;
+      const isMobile = W < 768;
+      const N = isMobile ? 800 : 2500;
       const geo = new THREE.BufferGeometry();
       const pos = new Float32Array(N * 3);
       const col = new Float32Array(N * 3);
       for (let i = 0; i < N; i++) {
-        pos[i*3]   = (Math.random()-0.5)*30;
-        pos[i*3+1] = (Math.random()-0.5)*30;
-        pos[i*3+2] = (Math.random()-0.5)*20;
-        const isRed = Math.random() > 0.7;
-        col[i*3]   = isRed ? 0.91 : 1;
-        col[i*3+1] = isRed ? 0.09 : 1;
-        col[i*3+2] = isRed ? 0.14 : 1;
-        if (!isRed) {
-          // white but very dim
-          col[i*3]   = 1; col[i*3+1] = 1; col[i*3+2] = 1;
-        }
+        pos[i*3]   = (Math.random() - 0.5) * 25;
+        pos[i*3+1] = (Math.random() - 0.5) * 25;
+        pos[i*3+2] = (Math.random() - 0.5) * 18;
+        if (Math.random() > 0.7) { col[i*3]=0.91; col[i*3+1]=0.09; col[i*3+2]=0.23; }
+        else { const b=0.15+Math.random()*0.25; col[i*3]=b; col[i*3+1]=b; col[i*3+2]=b; }
       }
       geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
       geo.setAttribute("color",    new THREE.BufferAttribute(col, 3));
-      const pMat = new THREE.PointsMaterial({ size: 0.025, vertexColors: true, transparent: true, opacity: 0.6 });
+      const pMat = new THREE.PointsMaterial({ size: isMobile?0.06:0.035, vertexColors:true, transparent:true, opacity:0.85 });
       const points = new THREE.Points(geo, pMat);
       scene.add(points);
 
-      // ── WIREFRAME SHAPES ──
-      type ShapeObj = { mesh: InstanceType<typeof THREE.Mesh>; vx: number; vy: number; vr: number };
-      const shapes: ShapeObj[] = [];
-      const geoList = [
-        new THREE.IcosahedronGeometry(0.5, 0),
-        new THREE.OctahedronGeometry(0.4, 0),
-        new THREE.TetrahedronGeometry(0.45, 0),
-        new THREE.IcosahedronGeometry(0.25, 0),
-        new THREE.OctahedronGeometry(0.3, 0),
-      ];
-      for (let i = 0; i < 10; i++) {
-        const g = geoList[i % geoList.length];
-        const isRed = i % 3 === 0;
-        const m = new THREE.MeshBasicMaterial({
-          color: isRed ? 0xe8173a : 0xffffff,
-          wireframe: true, transparent: true,
-          opacity: isRed ? 0.12 : 0.05,
-        });
-        const mesh = new THREE.Mesh(g, m);
-        mesh.position.set(
-          (Math.random()-0.5)*18,
-          (Math.random()-0.5)*12,
-          (Math.random()-0.5)*8 - 3
-        );
+      const shapes: S[] = [];
+      const geoList = [new THREE.IcosahedronGeometry(0.45,0), new THREE.OctahedronGeometry(0.38,0), new THREE.TetrahedronGeometry(0.42,0)];
+      for (let i = 0; i < (isMobile?4:9); i++) {
+        const m = new THREE.MeshBasicMaterial({ color:i%3===0?0xe8173a:0xffffff, wireframe:true, transparent:true, opacity:i%3===0?0.13:0.05 });
+        const mesh = new THREE.Mesh(geoList[i%3].clone(), m);
+        mesh.position.set((Math.random()-0.5)*16,(Math.random()-0.5)*10,(Math.random()-0.5)*7-2);
         scene.add(mesh);
-        shapes.push({
-          mesh,
-          vx: (Math.random()-0.5)*0.003,
-          vy: (Math.random()-0.5)*0.002,
-          vr: Math.random()*0.006+0.001
-        });
+        shapes.push({ mesh, vx:(Math.random()-0.5)*0.004, vy:(Math.random()-0.5)*0.003, vr:Math.random()*0.005+0.001 });
       }
 
-      // ── HORIZONTAL LINES (grid feel) ──
-      for (let i = 0; i < 5; i++) {
-        const lGeo = new THREE.BufferGeometry().setFromPoints([
-          new THREE.Vector3(-20, i*2-4, -5),
-          new THREE.Vector3( 20, i*2-4, -5),
-        ]);
-        const lMat = new THREE.LineBasicMaterial({ color: 0xe8173a, transparent: true, opacity: 0.04 });
-        scene.add(new THREE.Line(lGeo, lMat));
-      }
-
-      let mx = 0, my = 0;
-      const onMove = (e: MouseEvent) => {
-        mx = (e.clientX / window.innerWidth  - 0.5) * 0.8;
-        my = -(e.clientY / window.innerHeight - 0.5) * 0.8;
-      };
-      window.addEventListener("mousemove", onMove);
-
-      const onResize = () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      };
-      window.addEventListener("resize", onResize);
+      let mx=0, my=0;
+      const onMove  = (e: MouseEvent)  => { mx=(e.clientX/window.innerWidth-0.5)*0.7; my=-(e.clientY/window.innerHeight-0.5)*0.7; };
+      const onTouch = (e: TouchEvent)  => { if(!e.touches[0])return; mx=(e.touches[0].clientX/window.innerWidth-0.5)*0.3; my=-(e.touches[0].clientY/window.innerHeight-0.5)*0.3; };
+      const onResize= () => { const w=window.innerWidth,h=window.innerHeight; camera.aspect=w/h; camera.updateProjectionMatrix(); renderer.setSize(w,h); };
+      window.addEventListener("mousemove",onMove,{passive:true});
+      window.addEventListener("touchmove",onTouch,{passive:true});
+      window.addEventListener("resize",onResize,{passive:true});
 
       const animate = () => {
         animId = requestAnimationFrame(animate);
-        points.rotation.y += 0.0002;
-        points.rotation.x += 0.00008;
-        camera.position.x += (mx - camera.position.x) * 0.03;
-        camera.position.y += (my - camera.position.y) * 0.03;
+        points.rotation.y += 0.00025; points.rotation.x += 0.00008;
+        camera.position.x += (mx-camera.position.x)*0.028;
+        camera.position.y += (my-camera.position.y)*0.028;
         shapes.forEach(s => {
-          s.mesh.rotation.x += s.vr;
-          s.mesh.rotation.y += s.vr * 0.6;
-          s.mesh.position.x += s.vx;
-          s.mesh.position.y += s.vy;
-          if (Math.abs(s.mesh.position.x) > 10) s.vx *= -1;
-          if (Math.abs(s.mesh.position.y) > 7)  s.vy *= -1;
+          s.mesh.rotation.x+=s.vr; s.mesh.rotation.y+=s.vr*0.6;
+          s.mesh.position.x+=s.vx; s.mesh.position.y+=s.vy;
+          if(Math.abs(s.mesh.position.x)>10)s.vx*=-1;
+          if(Math.abs(s.mesh.position.y)>7) s.vy*=-1;
         });
         renderer.render(scene, camera);
       };
       animate();
 
-      cleanupFn = () => {
-        window.removeEventListener("mousemove", onMove);
-        window.removeEventListener("resize", onResize);
+      cleanup = () => {
         cancelAnimationFrame(animId);
+        window.removeEventListener("mousemove",onMove);
+        window.removeEventListener("touchmove",onTouch);
+        window.removeEventListener("resize",onResize);
         renderer.dispose();
+        if(canvas.parentNode) canvas.parentNode.removeChild(canvas);
       };
     })();
 
-    return () => { cleanupFn?.(); };
+    return () => { cleanup?.(); };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{ position:"fixed", top:0, left:0, width:"100%", height:"100%", zIndex:0, pointerEvents:"none" }}
-    />
-  );
+  return <div ref={mountRef} style={{position:"fixed",inset:0,zIndex:0,pointerEvents:"none"}}/>;
 }
