@@ -1,0 +1,30 @@
+{"timestamp":"00:00:03.503","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:07.691","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:08.124","source":"Server","level":"WARN","message":"⚠️  Supabase env vars missing — check NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY"}
+{"timestamp":"00:00:08.489","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:00:08.907","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:00:09.419","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:00:09.600","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:04:52.283","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:04:52.628","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:04:52.749","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:04:52.825","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:04:52.897","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:05:41.656","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:05:41.881","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:05:42.024","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:05:42.138","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:05:42.239","source":"Server","level":"ERROR","message":"⨯ Error: supabaseUrl is required."}
+{"timestamp":"00:06:45.786","source":"Server","level":"LOG","message":"  Reload env: .env.local"}
+{"timestamp":"00:07:03.343","source":"Server","level":"LOG","message":"  Reload env: .env.local"}
+{"timestamp":"00:07:19.174","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:08:04.023","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:08:13.743","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:08:15.784","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:08:17.496","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:08:44.346","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:11:52.990","source":"Server","level":"LOG","message":"  Reload env: .env.local"}
+{"timestamp":"00:23:45.500","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:30:27.916","source":"Server","level":"LOG","message":"✓ Compiled in 5.1s"}
+{"timestamp":"00:31:32.266","source":"Server","level":"LOG","message":"✓ Compiled in 593ms"}
+{"timestamp":"00:31:43.856","source":"Server","level":"LOG","message":"✓ Compiled in 1051ms"}

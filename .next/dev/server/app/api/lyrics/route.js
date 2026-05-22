@@ -1,0 +1,10 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/lyrics/route.js")
+R.c("server/chunks/Desktop_medias_Media_app_api_lyrics_route_ts_0iq~6j5._.js")
+R.c("server/chunks/0ogl_next_0bk._~d._.js")
+R.c("server/chunks/0ogl_@supabase_postgrest-js_dist_index_mjs_099v5fy._.js")
+R.c("server/chunks/0ogl_@supabase_auth-js_dist_module_0-uaf1p._.js")
+R.c("server/chunks/0ogl_0tgtomp._.js")
+R.c("server/chunks/[root-of-the-server]__0w-z~qu._.js")
+R.c("server/chunks/Desktop_medias_Media__next-internal_server_app_api_lyrics_route_actions_04l0sqb.js")
+R.m("[project]/Desktop/medias/Media/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Desktop/medias/Media/app/api/lyrics/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/Desktop/medias/Media/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Desktop/medias/Media/app/api/lyrics/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

@@ -1,0 +1,10 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/hero/route.js")
+R.c("server/chunks/Desktop_medias_Media_app_api_hero_route_ts_12mgbjr._.js")
+R.c("server/chunks/0ogl_next_0pkiedc._.js")
+R.c("server/chunks/0ogl_@supabase_postgrest-js_dist_index_mjs_099v5fy._.js")
+R.c("server/chunks/0ogl_@supabase_auth-js_dist_module_0-uaf1p._.js")
+R.c("server/chunks/0ogl_0tgtomp._.js")
+R.c("server/chunks/[root-of-the-server]__12rp47o._.js")
+R.c("server/chunks/Desktop_medias_Media__next-internal_server_app_api_hero_route_actions_06s.a.4.js")
+R.m("[project]/Desktop/medias/Media/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Desktop/medias/Media/app/api/hero/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/Desktop/medias/Media/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Desktop/medias/Media/app/api/hero/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

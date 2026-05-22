@@ -391,7 +391,7 @@ export default function Home() {
               <div className="sec-eyebrow">Contact</div>
               <h2 className="sec-title">Get In <span className="red">Touch</span></h2>
               <p className="sec-body" style={{marginBottom:"1.5rem"}}>Have a video request, suggestion or want to get in touch?</p>
-              <a href="mailto:matammedia@gmail.com" className="contact-email" data-hover>matammedia@gmail.com</a>
+              <a href="mailto:muhammadrizvi@gmail.com" className="contact-email" data-hover>muhammadrizvi@gmail.com</a>
               <div className="contact-tags">
                 {["Video Request","Feedback","Partnership"].map(t=><span key={t} className="contact-tag">{t}</span>)}
               </div>
@@ -433,11 +433,11 @@ export default function Home() {
             </div>
             <div>
               <div className="foot-col-title">More</div>
-              <a href="mailto:matammedia@gmail.com" className="foot-link">Email Us</a>
+              <a href="mailto:muhammadrizvi@gmail.com" className="foot-link">Email Us</a>
             </div>
           </div>
           <div className="foot-bottom">
-            <span className="foot-copy">© 2025 {settings.siteName} — All rights reserved</span>
+            <span className="foot-copy">© 2026 {settings.siteName} — All rights reserved</span>
             <div className="foot-dot"/>
             <span className="foot-copy">Ya Hussain (A.S)</span>
           </div>

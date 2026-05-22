@@ -1,0 +1,24 @@
+{
+  "[project]/Desktop/medias/Media/app/components/ThreeCanvas.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/Desktop/medias/Media/app/components/ThreeCanvas.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/0ogl_three_build_three_module_009v0ei.js",
+      "static/chunks/Desktop_medias_Media_app_components_ThreeCanvas_tsx_0vs9s1-._.js",
+      "static/chunks/Desktop_medias_Media_app_components_ThreeCanvas_tsx_0lg2exq._.js"
+    ]
+  },
+  "[project]/Desktop/medias/Media/app/components/Cursor.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/Desktop/medias/Media/app/components/Cursor.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/Desktop_medias_Media_app_components_Cursor_tsx_0a1sqrp._.js",
+      "static/chunks/Desktop_medias_Media_app_components_Cursor_tsx_0lg2exq._.js"
+    ]
+  },
+  "[project]/Desktop/medias/Media/app/components/HeroBg.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/Desktop/medias/Media/app/components/HeroBg.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/Desktop_medias_Media_app_components_HeroBg_tsx_0p6b98i._.js",
+      "static/chunks/Desktop_medias_Media_app_components_HeroBg_tsx_0lg2exq._.js"
+    ]
+  }
+}
