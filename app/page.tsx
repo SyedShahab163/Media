@@ -29,11 +29,11 @@ const FILTERS = [
   { id:"manqabat",      label:"Manqabat"      },
   { id:"majlis",        label:"Majlis"        },
 ];
-const TICKER = ["Nadeem Sarwar","Mir Hasan Mir","Ali Shanawar","Shadman Raza","Manqabat","Majlis","Karbala","Muharram","Azadari","Ya Hussain","Noha","Ya Ali"];
+const TICKER = [,"Manqabat","Majlis","Karbala","Muharram","Azadari","Ya Hussain","Noha",""];
 const FEATURED = [
   { ytId:"aXkqPNkKFfM", artist:"Nadeem Sarwar · 2023", title:"Aye Zainab",       sub:"The Masterpiece",  desc:"One of the most emotional nohay — dedicated to the tragedy of Karbala and patience of Bibi Zainab (S.A)." },
-  { ytId:"1hJfSPBgpnk", artist:"Mir Hasan Mir · 2023", title:"Woh Karbala Gaye", sub:"A Timeless Classic",desc:"A deeply moving noha about the journey to Karbala, recited with raw emotion by Mir Hasan Mir." },
-  { ytId:"LDU_Txk06tM", artist:"Ali Shanawar · 2023",  title:"Mola Hussain",     sub:"Tribute to Imam",  desc:"Ali Shanawar's powerful tribute to Imam Hussain (A.S) — feel the pain of Karbala in every word." },
+  // { ytId:"1hJfSPBgpnk", artist:"Mir Hasan Mir · 2023", title:"Woh Karbala Gaye", sub:"A Timeless Classic",desc:"A deeply moving noha about the journey to Karbala, recited with raw emotion by Mir Hasan Mir." },
+  // { ytId:"LDU_Txk06tM", artist:"Ali Shanawar · 2023",  title:"Mola Hussain",     sub:"Tribute to Imam",  desc:"Ali Shanawar's powerful tribute to Imam Hussain (A.S) — feel the pain of Karbala in every word." },
 ];
 
 // ── Admin Unlock ─────────────────────────────────────────────────────
